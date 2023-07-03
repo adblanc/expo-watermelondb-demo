@@ -1,3 +1,9 @@
+# Small WatermelonDB with Expo demo
+
+## Technologies used
+- Expo
+- Expo config plugins
+- WatermelonDB
 
 issue to fix to build on m1 :
 remove arm64 from excluded architectures
