@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import { BlogsList } from './components/BlogsList';
-import { database } from './db';
+import { BlogsList } from './src/components/BlogsList';
+import { database } from './src/db';
 import DatabaseProvider from '@nozbe/watermelondb/DatabaseProvider'
-import { CreateBlogButton } from './components/CreateBlogButton';
+import { CreateBlogButton } from './src/components/CreateBlogButton';
 
 export default function App() {
   return (
