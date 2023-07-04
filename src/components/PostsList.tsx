@@ -3,11 +3,13 @@ import { withDatabase } from "@nozbe/watermelondb/DatabaseProvider";
 import withObservables from "@nozbe/with-observables";
 import { FlatList, Text, View } from "react-native";
 
-const NotEnhancedPostsList = ({ blogs }) => {
+import { Post } from "../model/Post";
+
+const NotEnhancedPostsList = ({ posts }: { posts: Post[] }) => {
   return (
     <View>
       <FlatList
-        data={blogs}
+        data={posts}
         renderItem={({ item }) => {
           return (
             <Text style={{ padding: 20, fontSize: 20 }}>{item.title}</Text>
@@ -19,10 +21,10 @@ const NotEnhancedPostsList = ({ blogs }) => {
 };
 
 const enhance = withObservables([], ({ database }: { database: Database }) => {
-  const blogs = database.collections.get("posts").query();
+  const posts = database.collections.get("posts").query();
 
   return {
-    blogs,
+    posts,
   };
 });
 
