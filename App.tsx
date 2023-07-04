@@ -2,16 +2,16 @@ import DatabaseProvider from "@nozbe/watermelondb/DatabaseProvider";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 
-import { BlogsList } from "./src/components/BlogsList";
-import { CreateBlogButton } from "./src/components/CreateBlogButton";
+import { CreatePostButton } from "./src/components/CreatePostButton";
+import { PostsList } from "./src/components/PostsList";
 import { database } from "./src/db";
 
 export default function App() {
   return (
     <DatabaseProvider database={database}>
       <View style={styles.container}>
-        <BlogsList />
-        <CreateBlogButton />
+        <PostsList />
+        <CreatePostButton />
         <StatusBar style="auto" />
       </View>
     </DatabaseProvider>
